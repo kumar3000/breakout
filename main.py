@@ -1,5 +1,6 @@
 from google import genai
 
+
 file_path = 'ingredients.txt'
 bad_ings = [] # bad_ingredients
 
