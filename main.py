@@ -2,7 +2,7 @@ from google import genai
 import os
 from dotenv import load_dotenv
 
-ingredients = 'ingredients.txt'
+ingredients = 'breakout_ingredients.txt'
 bad_ings = [] # bad_ingredients
 
 # Load env vars
@@ -28,10 +28,9 @@ product = input("Product Name: ")
 response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents=[
-        ingredients,
         product,
         bad_ings,
-        "Scan through the product ingredients and list any ingredients that are in the bad_ings list."
+        "Get the product's ingredients from the OFFICIAL BRANDED PRODUCT WEBSITE and its listing of ingredients. Are there ingredients in the ACTUAL BRANDED PRODUCT that match with the breakout_ingredients list (bad_ings)?"
     ]
 )
 
