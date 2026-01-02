@@ -24,7 +24,7 @@ if not api_key or api_key.strip().lower() in {"your_key_here", "changeme", "repl
 
 # Query Gemini
 client = genai.Client(api_key=api_key)
-product = input("Product Name: ")
+product = input("Enter Product Name: ")
 response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents=[
